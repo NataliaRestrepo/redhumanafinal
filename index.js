@@ -53,16 +53,15 @@ app.get("/",(req,res)=>{
 
 });
 
-app.post("/grabar",(req,res)=>{
+/*app.post("/grabar",(req,res)=>{
 	new Usuarios(req.body).save().then(()=>{
 		res.send("Usuario guardado con exito");
 	});
-});		
+});		*/
 
 app.get("/registro",(req,res)=>{
 	let formulario ="<link rel='stylesheet' type='text/css' href='css/main.css'/>";
-	formulario += `<form action="/grabar" method="post">
-			<label for="nombre">
+	formulario += `<label for="nombre">
 		<section class="form-register">
 				<a href=img/redhumana.png><img src="img/redhumana.png"width="90%"></a>
 				<h1>Te Forma APP</h1>
@@ -70,11 +69,49 @@ app.get("/registro",(req,res)=>{
 			<input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su usuario"> <br> <br>
 			<input class="controls" type="password" name="clave" id="clave" placeholder="Ingrese su contraseña"> <br> <br>
 			<h3>Recordar contraseña</h3>
-			<a href="perfil.html"><input class="botons" type="submit" value="Iniciar sesion"></a>
+			<a href="/perfil"><input class="botons" type="submit" value="Iniciar sesion"></a>
 		</form>
 	</label>`;
 	res.send(formulario);
-})
+});
+
+
+app.get("/perfil",(req,res)=>{
+	let pantalla ="<link rel='stylesheet' type='text/css' href='css/perfil.css'/>"
+	pantalla += `<head>
+	<title>Red humana Te forma APP</title>
+	<meta charset="utf-8">
+	</head>
+	<body>
+		<section class="form-register">
+				<a href=img/perfil.png><img src="img/perfil.png"width="30%"></a>
+				<h1>Nombre</h1>
+				<h1>Cargo</h1>
+				<h1>Dependencia</h1>
+			<br><br>
+			<a href="/historial"><input class="botons" type="submit" value="Historial de cursos"><br> <br>
+			<a href="/explorar"><input class="botons" type="submit" value="Explorar"> <br> <br>
+			<a href="/comenzar"><input class="botons" type="submit" value="Comenzar curso"> </a><br> <br>
+		</section>
+	</body>
+</html>`
+		res.send(pantalla);
+	});
+
+app.get("/historial",(req,res)=>{
+	let historial ="<link rel='stylesheet' type='text/css' href='css/historial.css'/>"
+	historial +=`		<section class="form-register">
+				<a href=img/historial.png><img src="img/historial.png"width="40%"> </a>
+				<br><br>
+				<br><br>
+				<h1>-Puestos de pago</h1>
+				<h1>-Gente con éxito</h1>
+				<h1>-Seguridad en el trabajo</h1>
+			<br><br>
+			<input class="botons" type="submit" value="Atrás"><br> <br>	
+		</section>`
+		res.send(historial);
+	});
 
 app.listen(port,()=>{
 	console.log("Empezo el servidor");
