@@ -113,6 +113,129 @@ app.get("/historial",(req,res)=>{
 		res.send(historial);
 	});
 
+app.get("/explorar",(req,res)=>{
+	let explorar ="<link rel='stylesheet' type='text/css' href='css/explorar.css'/>"
+	explorar +=`	<section class="form-register">
+				<a href=img/explorar.png><img src="img/explorar.png"width="40%"></a>
+				<br><br>
+				<br><br>
+				<h1>¿Que hay por aprender?</h1>
+				<h1>Descubre tus funciones</h1>
+				<h1>Relacionado a tu cargo</h1>
+			<br><br>
+			<input class="botons" type="submit" value="Atrás"><br> <br>	
+		</section>`	
+		res.send(explorar);
+	});
+
+ app.get("/comenzar",(req,res)=>{
+	let comenzar ="<link rel='stylesheet' type='text/css' href='css/comenzar.css'/>"
+	comenzar +=`<section class="comenzar">
+		<h2>Puestos de pago</h2>
+				<br>
+				<br>
+				<br>
+			<a href="descrpcion.html"><input class="botons" type="submit" value="Descripción de tareas"></a>
+				<br>
+				<br>
+			<a href="interfaz.html"><input class="botons" type="submit" value="Interfaz de puestos de pago"></a>
+				<br>
+				<br>
+			<a href="simulador.html"><input class="botons" type="submit" value="Simulador"></a>	
+		
+	</section>`
+		res.send(comenzar);
+	});
+
+ app.get("/comenzar",(req,res)=>{
+	let comenzar ="<link rel='stylesheet' type='text/css' href='css/comenzar.css'/>"
+	comenzar +=`<section class="comenzar">
+		<h2>Puestos de pago</h2>
+				<br>
+				<br>
+				<br>
+			<a href="/descrpcion"><input class="botons" type="submit" value="Descripción de tareas"></a>
+				<br>
+				<br>
+			<a href="/interfaz"><input class="botons" type="submit" value="Interfaz de puestos de pago"></a>
+				<br>
+				<br>
+			<a href="/simulador"><input class="botons" type="submit" value="Simulador"></a>	
+		
+	</section>`
+		res.send(comenzar);
+	});
+
+ app.get("/descrpcion",(req,res)=>{
+	let descrpcion ="<link rel='stylesheet' type='text/css' href='css/descrpcion.css'/>"
+	descrpcion +=`<section class="form-register">
+				<a href=img/descripcion.png><img src="img/descripcion.png"width="40%"></a>
+				<br><br>
+				<br><br>
+				<h1>Generalidades</h1>
+				<h1>¿Qué hacer en un puesto de pago?</h1>
+				<h1>Funciones</h1>
+				<h1>Actividades en registro</h1>
+				<br><br>
+			<input class="botons" type="submit" value="Atrás"><br> <br>	
+		</section>`
+		res.send(descrpcion);
+	});
+
+ app.get("/interfaz",(req,res)=>{
+	let interfaz ="<link rel='stylesheet' type='text/css' href='css/interfaz.css'/>"
+	interfaz +=`<style type="text/css">
+			h1
+			{
+			color: black;
+			font-family: 'calibri';
+			font-size: 15px;
+			text-align: left;
+			}
+		</style>
+
+		
+		<section class="form-register">
+			<h1>LUNES A VIERNES 8:00 AM 9:00 PM</h1>
+				<h2 href=img/Captura.PNG><img src="img/Captura.PNG"width="70%"></h2>
+				<h2>Identificador operador:</h2>
+				<h2>Contraseña:</h2>
+		</section>
+
+		<div style="text-align: center;">
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">7</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">8</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">9</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:65px;type="button" name="btnprueba">BORRAR</button>
+		</div>
+
+		<div style="text-align: center;">
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">6</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">5</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">4</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:65px;type="button" name="btnprueba">DATOS</button>
+		</div>
+
+		<div style="text-align: center;">
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">3</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">2</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">1</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:65px;type="button" name="btnprueba">ATRAS</button>
+		</div>
+
+		<div style="text-align: center;">
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">.</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">0</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:50px;type="button" name="btnprueba">00</button>
+   	 	<button style="position: center;top: 40%;height:40px; width:65px;type="button" name="btnprueba">ENTRAR</button>
+		</div><br>
+
+		<div style="text-align: center;">
+   	 	<button style="position: left;top: 40%;height:50px; width:150px;type="button" name="btnprueba">CAMBIARCONTRASEÑA</button>
+   	 	<button style="position: rigth;top: 40%;height:50px; width:100px;type="button" name="btnprueba">IZQUIERDA</button>
+		</div>`
+		res.send(interfaz);
+	});
 app.listen(port,()=>{
 	console.log("Empezo el servidor");
 });
