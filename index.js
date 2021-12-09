@@ -135,13 +135,13 @@ app.get("/explorar",(req,res)=>{
 				<br>
 				<br>
 				<br>
-			<a href="descrpcion.html"><input class="botons" type="submit" value="Descripción de tareas"></a>
+			<a href="/descrpcion"><3input class="botons" type="submit" value="Descripción de tareas"></a>
 				<br>
 				<br>
-			<a href="interfaz.html"><input class="botons" type="submit" value="Interfaz de puestos de pago"></a>
+			<a href="/interfaz"><input class="botons" type="submit" value="Interfaz de puestos de pago"></a>
 				<br>
 				<br>
-			<a href="simulador.html"><input class="botons" type="submit" value="Simulador"></a>	
+			<a href="/simulador"><input class="botons" type="submit" value="Simulador"></a>	
 		
 	</section>`
 		res.send(comenzar);
@@ -167,7 +167,7 @@ app.get("/explorar",(req,res)=>{
 	});
 
  app.get("/descrpcion",(req,res)=>{
-	let descrpcion ="<link rel='stylesheet' type='text/css' href='css/descrpcion.css'/>"
+	let descrpcion ="<link rel='stylesheet' type='text/css' href='css/descripcion.css'/>"
 	descrpcion +=`<section class="form-register">
 				<a href=img/descripcion.png><img src="img/descripcion.png"width="40%"></a>
 				<br><br>
