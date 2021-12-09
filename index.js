@@ -135,7 +135,7 @@ app.get("/explorar",(req,res)=>{
 				<br>
 				<br>
 				<br>
-			<a href="/descrpcion"><3input class="botons" type="submit" value="Descripción de tareas"></a>
+			<a href="/descrpcion"><input class="botons" type="submit" value="Descripción de tareas"></a>
 				<br>
 				<br>
 			<a href="/interfaz"><input class="botons" type="submit" value="Interfaz de puestos de pago"></a>
